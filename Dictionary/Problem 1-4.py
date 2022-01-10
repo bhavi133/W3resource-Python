@@ -2,10 +2,10 @@
 
 dict1 = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
 print(dict1.items())
-sort_dict1 = sorted(dict1.items(), key= lambda item: item[1])
-print(dict(sort_dict1))
-sort_dict1 = sorted(dict1.items(), key= lambda item: item[1], reverse=True)
-print(dict(sort_dict1))
+sorted_dict1 = sorted(dict1.items(), key= lambda item: item[1])
+print('Dictionary in ascending order by value:', dict(sorted_dict1))
+sorted_dict1 = sorted(dict1.items(), key= lambda item: item[1], reverse=True)
+print('Dictionary in descending order by value:', dict(sorted_dict1))
 
 # 2. Write a Python program to add a key to a dictionary
 
