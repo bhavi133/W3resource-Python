@@ -40,3 +40,73 @@ key_min = min(dict1.keys(), key=(lambda x: dict1[x]))
 print(dict1.keys())
 print('Maximum value in a dictionary: ', dict1[key_max])
 print('Minimum value in a dictionary: ', dict1[key_min])
+
+# 16. Write a Python program to get a dictionary from an object's fields.
+
+class dictObj(object):
+
+     def __init__(self):
+         self.x = 'red'
+         self.y = 'blue'
+         self.z = 'black'
+
+     def display(self):
+         pass
+
+obj1 = dictObj()
+print(obj1.__dict__)
+
+# 17. Write a Python program to remove duplicates from dictionary.
+
+student_data = {'id1':
+   {'name': ['Sara'],
+    'class': ['V'],
+    'subject_integration': ['english, math, science']
+   },
+ 'id2':
+  {'name': ['David'],
+    'class': ['V'],
+    'subject_integration': ['english, math, science']
+   },
+ 'id3':
+    {'name': ['Sara'],
+    'class': ['V'],
+    'subject_integration': ['english, math, science']
+   },
+ 'id4':
+   {'name': ['Surya'],
+    'class': ['V'],
+    'subject_integration': ['english, math, science']
+   },
+}
+
+result = {}
+
+for key, val in student_data.items():
+    if val not in result.values():
+        result[key] = val
+
+print(result)
+
+# 18. Write a Python program to check a dictionary is empty or not.
+
+dict1 = {}
+if not bool(dict1):
+    print("Dictionary is empty")
+else:
+    print("Dictionary is not empty")
+
+# 19. Write a Python program to combine two dictionary adding values for common keys.
+
+from collections import Counter
+
+dict1 = {'a': 100, 'b': 200, 'c':300}
+dict2 = {'a': 300, 'b': 200, 'd':400}
+dict3 = Counter(dict1) + Counter(dict2)
+print(dict3)
+
+# 20. Write a Python program to print all unique values in a dictionary.
+
+dict1 = [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]
+unique = set(x for i in dict1 for x in i.values())
+print(unique)
