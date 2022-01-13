@@ -1,46 +1,3 @@
-# 11. Write a Python program to multiply all the items in a dictionary.
-
-def multiply_function(dict1):
-    ctr = 1
-    for i in dict1.values():
-        ctr = ctr * i
-    return ctr
-
-dict1 = {'data1':100,'data2':-54,'data3':247}
-print(multiply_function(dict1))
-
-# 12. Write a Python program to remove a key from a dictionary.
-
-dict1 = {'a':1,'b':2,'c':3,'d':4}
-del dict1['b']
-print(dict1)
-
-# 13. Write a Python program to map two lists into a dictionary.
-
-list1 = ['a', 'b', 'c', 'd']
-list2 = [1, 2, 3, 4]
-dict1 = dict(zip(list1, list2))
-print(dict1)
-
-# 14. Write a Python program to sort a given dictionary by key.
-
-color_dict = {'red':'#FF0000',
-          'green':'#008000',
-          'black':'#000000',
-          'white':'#FFFFFF'}
-
-for i in sorted(color_dict):
-    print(i, color_dict[i])
-
-# 15. Write a Python program to get the maximum and minimum value in a dictionary.
-
-dict1 = {'x':500, 'y':5874, 'z': 560}
-key_max = max(dict1.keys(), key=(lambda x: dict1[x]))
-key_min = min(dict1.keys(), key=(lambda x: dict1[x]))
-print(dict1.keys())
-print('Maximum value in a dictionary: ', dict1[key_max])
-print('Minimum value in a dictionary: ', dict1[key_min])
-
 # 16. Write a Python program to get a dictionary from an object's fields.
 
 class dictObj(object):
@@ -110,3 +67,42 @@ print(dict3)
 dict1 = [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]
 unique = set(x for i in dict1 for x in i.values())
 print(unique)
+
+# 21. Write a Python program to create a dictionary from a string.
+
+def frequency(string):
+    dict1 = {}
+    for i in string:
+        if i in dict1:
+            dict1[i] += 1
+        else:
+            dict1[i] = 1
+    return dict1
+
+string = 'w3resource'
+print(frequency(string))
+
+# 22. Write a Python program to count the values associated with key in a dictionary. 
+
+student = [{'id': 1, 'success': True, 'name': 'Lary'},
+ {'id': 2, 'success': False, 'name': 'Rabi'},
+ {'id': 3, 'success': True, 'name': 'Alex'}]
+print(sum(d['id'] for d in student))
+print(sum(d['success'] for d in student))
+
+# 23. Write a Python program to create a dictionary of keys x, y, and z where each key has as value a list from 11-20, 21-30, and 31-40 respectively. Access the fifth value of each key from the dictionary.
+
+dict1 = {'x': [11, 12, 13, 14, 15, 16, 17, 18, 19],
+         'y': [21, 22, 23, 24, 25, 26, 27, 28, 29],
+         'z': [31, 32, 33, 34, 35, 36, 37, 38, 39]}
+
+for j in dict1.values():
+    print(j[4])
+
+# 24. Write a Python program to drop empty items from a given dictionary.
+
+dict1 = {'c1': 'Red', 'c2': 'Green', 'c3':None}
+print(dict1)
+print("New Dictionary after dropping empty items:")
+dict1 = {key:val for (key, val) in dict1.items() if val is not None}
+print(dict1)
