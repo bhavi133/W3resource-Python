@@ -36,3 +36,25 @@ def capitalize_first_last_letters(str1):
 
 print(capitalize_first_last_letters("python exercises practice solution"))
 print(capitalize_first_last_letters("w3resource"))
+
+# 59. Write a Python program to remove duplicate characters of a given string.
+
+from collections import OrderedDict
+
+def remove_duplicate(str1):
+    return "".join(OrderedDict.fromkeys(str1))
+
+print(remove_duplicate("python exercises practice solution"))
+print(remove_duplicate("w3resource"))
+
+# 60. Write a Python program to compute sum of digits of a given string.
+
+def sum_digits_string(str1):
+    sum = 0
+    for i in str1:
+        if i.isdigit():
+            sum = sum + int(i)
+    return sum
+
+print(sum_digits_string("123abcd45"))
+print(sum_digits_string("abcd1234"))
