@@ -61,3 +61,46 @@ def test_range(n, r1, r2):
 
 print(test_range(15, 10, 20))
 print(test_range(5, 10, 20))
+
+# 7. Write a Python function that accepts a string and calculate the number of upper case letters and lower case letters.
+
+def string_test(str1):
+    upper = 0
+    lower = 0
+    for i in str1:
+        if i.isupper():
+            upper += 1
+        elif i.islower():
+            lower += 1
+    print("Number of upper case letters in a string : ", upper)
+    print("Number of lower case letters in a string : ", lower)
+
+str1 = 'The quick Brow Fox'
+string_test(str1)
+
+# 8. Write a Python function that takes a list and returns a new list with unique elements of the first list.
+
+def unique_list(list1):
+    nums = []
+    for i in list1:
+        if i not in nums:
+            nums.append(i)
+    return nums
+
+list1 = [1,2,3,3,3,3,4,5]
+print(unique_list(list1))
+
+# 9. Write a Python function that takes a number as a parameter and check the number is prime or not.
+
+def is_prime(n):
+    if n == 1:
+        print(f"{n} is neither prime nor composite")
+    else:
+        for i in range(2, n):
+            if n % i == 0:
+                print(f"{n} is not a prime number")
+                break
+        else:
+            print(f"{n} is a prime number")
+
+print(is_prime(1))
