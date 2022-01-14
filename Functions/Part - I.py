@@ -31,3 +31,33 @@ def multiply_of_numbers(list1):
 
 list1 = [8, 2, 3, -1, 7]
 print(multiply_of_numbers(list1))
+
+# 4. Write a Python program to reverse a string.
+
+def reverse(str1):
+    string = ""
+    for i in str1:
+        string = i + string
+    return string
+
+str1 = "1234abcd"
+print(reverse(str1))
+
+# 5. Write a Python function to calculate the factorial of a number (a non-negative integer). The function accepts the number as an argument.
+
+def factorial(number):
+    if number <= 1:
+        return 1
+    else:
+        return number * factorial(number-1)
+
+number = int(input("Input a number:"))
+print(factorial(number))
+
+# 6. Write a Python function to check whether a number falls in a given range.
+
+def test_range(n, r1, r2):
+    return n in range(r1, r2)
+
+print(test_range(15, 10, 20))
+print(test_range(5, 10, 20))
