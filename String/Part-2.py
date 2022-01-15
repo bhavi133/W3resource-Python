@@ -1,45 +1,3 @@
-# 7. Write a Python program to find the first appearance of the substring 'not' and 'poor' from a given string, if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
-
-def not_poor(str1):
-    str_not = str1.find('not')
-    str_poor = str1.find('poor')
-    if str_poor > str_not and str_not > 0 and str_poor > 0:
-        str1 = str1.replace(str1[str_not:(str_poor + 4)], 'good')
-        return str1
-    else:
-        return str1
-
-
-print(not_poor('The lyrics is not that poor!'))
-print(not_poor('The lyrics is poor!'))
-
-# 8. Write a Python function that takes a list of words and return the longest word and the length of the longest one. 
-
-def find_longest_word(words_list):
-    word = sorted(words_list, reverse=True, key=len)
-    return len(word[0]), word[0]
-
-result = find_longest_word(["PHP", "Exercises", "Backend"])
-print("Longest word: ", result[1])
-print("Length of the longest word: ", result[0])
-
-# 9. Write a Python program to remove the nth index character from a nonempty string.
-
-def remove_char(str1, n):
-    return str1[0:n] + str1[n+1:]
-
-print(remove_char('Python', 0))
-print(remove_char('Python', 3))
-print(remove_char('Python', 5))
-
-# 10. Write a Python program to change a given string to a new string where the first and last chars have been exchanged. 
-
-def change_string(string):
-    return string[-1] + string[1:-1] + string[0]
-
-print(change_string('abcd'))
-print(change_string('12345'))
-
 # 11. Write a Python program to remove the characters which have odd index values of a given string.
 
 def odd_values_string(str1):
@@ -140,20 +98,3 @@ def reverse_string(str1):
 
 print(reverse_string('abcd'))
 print(reverse_string('python'))
-
-# 21. Write a Python function to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters.
-
-def to_uppercase(str1):
-    upper_case = 0
-    for i in str1[0:4]:
-        if i.upper() == i:
-            upper_case += 1
-    if upper_case >= 2:
-        return str1.upper()
-    else:
-        return str1
-
-print(to_uppercase('Python'))
-print(to_uppercase('PyThon'))
-
-
