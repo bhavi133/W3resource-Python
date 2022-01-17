@@ -104,3 +104,23 @@ def is_prime(n):
             print(f"{n} is a prime number")
 
 print(is_prime(1))
+
+# 10. Write a Python program to print the even numbers from a given list.
+
+def is_even(list1):
+    result = [i for i in list1 if i % 2 == 0]
+    return result
+
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(is_even(list1))
+
+# 11. Write a Python function to check whether a number is perfect or not.
+
+def perfect_number(n):
+    sum = 0
+    for i in range(1, n):
+        if n % i == 0:
+            sum += i
+            print(sum)
+    return sum == n
+print(perfect_number(10))
