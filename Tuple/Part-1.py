@@ -63,3 +63,42 @@ tup1 = ("w", 3, "r", "e", "s", "o", "u", "r", "c", "e")
 print(tup1)
 print(tup1[3])
 print(tup1[-4])
+
+# 8. Write a Python program to create the copy of a tuple.
+
+from copy import deepcopy
+
+tup1 = ("HELLO", 5, [], True)
+print(tup1)
+tup2 = tup1
+print(tup2)
+
+tup1 = ("HELLO", 5, [], True)
+print(tup1)
+tup2 = deepcopy(tup1)
+print(tup2)
+
+# 9. Write a Python program to find the repeated items of a tuple.
+
+tup1 = (2, 4, 5, 6, 2, 3, 4, 4, 7)
+unique = []
+for i in tup1:
+    if tup1.count(i) > 1:
+        unique.append(i)
+print(tuple(set(unique)))
+
+# 10. Write a Python program to check whether an element exists within a tuple.
+
+tup1 = (1, 2, 3, 4, 5)
+print(tup1)
+print(0 in tup1)
+print(3 in tup1)
+
+# 11. Write a Python program to convert a list to a tuple.
+
+list1 = ['e', 'x', 'e', 'r', 'c', 'i', 's', 'e', 's']
+print(list1)
+print(type(list1))
+tup1 = tuple(list1)
+print(tup1)
+print(type(tup1))
