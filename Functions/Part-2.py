@@ -67,3 +67,36 @@ def hello():
     return "hello world"
 
 print(hello())
+
+# 17. Write a Python program to execute a string containing Python code.
+
+str1 = 'print("Hello World!")'
+code = """
+def sum(x, y):
+    return x + y
+
+print('The sum of 2 and 3 is: ', sum(2, 3))
+"""
+exec(str1)
+exec(code)
+
+# 18. Write a Python program to access a function inside a function
+
+def make_adder(x):
+    def adder(y):
+        return x + y
+    return adder
+
+result = make_adder(5)
+print(result(3))
+
+# 19. Write a Python program to detect the number of local variables declared in a function.
+
+def abc():
+    x = 1
+    y = 2.0
+    str1= "w3resource"
+    val = True
+    print("Hello World!")
+
+print(abc.__code__.co_nlocals)
