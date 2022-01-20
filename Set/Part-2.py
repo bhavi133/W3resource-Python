@@ -32,3 +32,36 @@ print("Maximum value of the said set:")
 print(max(set1))
 print("Minimum value of the said set:")
 print(min(set1))
+
+# 15. Write a Python program to find the length of a set.
+
+def length(set1):
+    ctr = 0
+    for i in set1:
+        ctr += 1
+    return ctr
+
+set1 = {5, 10, 3, 15, 2, 20}
+print("Length of the said set:", length(set1))
+
+# 16. Write a Python program to check if a given value is present in a set or not.
+
+set1 = {5, 10, 3, 15, 2, 9}
+print("Original Set: ", set1, "\n")
+print("Test if 6 exists in a set:", 6 in set1)
+print("Test if 3 exists in a set:", 3 in set1)
+print("Test if 9 exists in a set:", 9 in set1)
+
+# 17. Write a Python program to check if two given sets have no elements in common.
+
+set1 = {1, 2, 3, 4}
+set2 = {4, 5, 6, 7}
+set3 = {8}
+print("Original Sets:")
+print(set1)
+print(set2)
+print(set3)
+print("\nConfirm two given sets have no element(s) in common:")
+print("\nCompare set1 and set2:", set1.isdisjoint(set2))
+print("Compare set2 and set3:", set2.isdisjoint(set3))
+print("Compare set3 and set1:", set3.isdisjoint(set1))
