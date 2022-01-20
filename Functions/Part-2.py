@@ -34,3 +34,36 @@ str1 = "green-red-yellow-black-white"
 str1 = str1.split('-')
 str2 = sorted(str1)
 print("-".join(str2))
+
+# 15. Write a Python function to create and print a list where the values are square of numbers between 1 and 30 (both included).
+
+def printValues():
+    list1 = [i**2 for i in range(1, 31)]
+    return list1
+
+print(printValues())
+
+# 16. Write a Python program to make a chain of function decorators (bold, italic, underline etc.) in Python.
+
+def make_bold(fn):
+    def wrapped():
+        return "<b>" + fn() + "</b>"
+    return wrapped
+
+def make_italic(fn):
+    def wrapped():
+        return "<i>" + fn() + "</i>"
+    return wrapped
+
+def make_underline(fn):
+    def wrapped():
+        return "<u>" + fn() + "</u>"
+    return wrapped
+
+@make_bold
+@make_italic
+@make_underline
+def hello():
+    return "hello world"
+
+print(hello())
