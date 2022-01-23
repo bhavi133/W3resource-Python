@@ -100,3 +100,65 @@ def abc():
     print("Hello World!")
 
 print(abc.__code__.co_nlocals)
+
+# 20. Write a Python program to find the repeated items of a list.
+
+list1 = [1, 2, 2, 3, 3, 4, 4, 4]
+unique = []
+for i in list1:
+    if list1.count(i) > 1:
+        unique.append(i)
+print(list(set(unique)))
+
+def repeated_items(list1):
+    dict1 = {}
+    for i in list1:
+        if i in dict1:
+            dict1[i] += 1
+        else:
+            dict1[i] = 1
+
+    list2 = []
+    for i, j in dict1.items():
+        if dict1[i] > 1:
+            list2.append(i)
+    return list2
+
+list1 = [1, 2, 2, 3, 3, 4, 4, 4, 5, 5]
+print(repeated_items(list1))
+
+# 21. Write a Python function to write the fibonacci sequence.
+
+def fibonacci(n):
+    a = 0
+    b = 1
+    if n == 1:
+        print(a)
+    elif n == 2:
+        print(a)
+        print(b)
+    else:
+        print(a)
+        print(b)
+        for i in range(2, n):
+            c = a + b
+            a = b
+            b = c
+            print(c)
+
+fibonacci(15)
+
+# 22. Write a Python program to create a dictionary from a string.
+
+def frequency(string):
+    string = string.split()
+    dict1 = {}
+    for i in string:
+        if i in dict1:
+            dict1[i] += 1
+        else:
+            dict1[i] = 1
+    return dict1
+
+string = 'The quick brown fox jumps over the lazy dog'
+print(frequency(string))
