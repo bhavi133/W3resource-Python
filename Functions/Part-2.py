@@ -160,5 +160,5 @@ def frequency(string):
             dict1[i] = 1
     return dict1
 
-string = 'The quick brown fox jumps over the lazy dog'
+string = 'the quick brown fox jumps over the lazy dog'
 print(frequency(string))
