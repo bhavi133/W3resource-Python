@@ -65,3 +65,43 @@ print("\nConfirm two given sets have no element(s) in common:")
 print("\nCompare set1 and set2:", set1.isdisjoint(set2))
 print("Compare set2 and set3:", set2.isdisjoint(set3))
 print("Compare set3 and set1:", set3.isdisjoint(set1))
+
+# 18. Write a Python program to check if a given set is superset of itself and superset of another given set.
+
+num1 = {1, 2, 3, 4, 5, 7}
+num2 = {2, 4}
+num3 = {2, 4}
+print("Original Sets:")
+print(num1)
+print(num2)
+print(num3)
+print("\nCheck if num1 is superset of itself:", num1.issuperset(num1))
+print("Check if num2 is superset of itself:", num2.issuperset(num2))
+print("Check if num3 is superset of itself:", num3.issuperset(num3))
+print("\n")
+print("Check num1 is a superset of num2:", num1 > num2)
+print("Check num2 is a superset of num3:", num2 > num3)
+print("Check num3 is a superset of num1:", num3 > num1)
+
+# 19. Write a Python program to find the elements in a given set that are not in another set.
+
+set1 = {1, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+print("Original Sets:")
+print("Difference of set1 and set2:")
+print(set1 - set2)
+print("Difference of set2 and set1:")
+print(set2 - set1)
+
+# 20. Write a Python program to remove the intersection of a 2nd set from the 1st set.
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+print("Original Sets:")
+print(set1)
+print(set2)
+print("Remove the intersection of a 2nd set from the 1st set:")
+set1.difference_update(set2)
+print(set1)
+print("set1: ", set1)
+print("set2: ", set2)
