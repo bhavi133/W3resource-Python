@@ -87,3 +87,31 @@ if len(list1) < 1:
     print("List is empty")
 else:
     print("List is not empty")
+
+# 9. Write a Python program to clone or copy a list
+
+list1 = [10, 22, 44, 23, 4]
+print(list1)
+list2 = list1
+print(list2)
+
+# 10. Write a Python program to find the list of words that are longer than n from a given list of words.
+
+def long_words(str1, n):
+    list1 = [i for i in str1.split() if len(i) > n]
+    return list1
+
+str1 = "The quick brown fox jumps over the lazy dog"
+print(long_words(str1, 3))
+
+# 11. Write a Python function that takes two lists and returns True if they have at least one common member.
+
+def common_data(l1, l2):
+    for i in l1:
+        if i in l2:
+            return True
+    else:
+        return False
+
+print(common_data([1, 2, 3, 4, 5], [5, 6, 7, 8, 9]))
+print(common_data([1, 2, 3, 4, 5], [6, 7, 8, 9]))
