@@ -115,3 +115,28 @@ def common_data(l1, l2):
 
 print(common_data([1, 2, 3, 4, 5], [5, 6, 7, 8, 9]))
 print(common_data([1, 2, 3, 4, 5], [6, 7, 8, 9]))
+
+# 12. Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.
+
+colors = ['red', 'green', 'white', 'black', 'pink', 'yellow']
+colors = [j for i, j in enumerate(colors) if i not in (0, 3, 4)]
+print(colors)
+
+# 13. Write a Python program to generate a 3*4*6 3D array whose each element is *.
+
+arr = [[['*' for col in range(6)] for col in range(4)] for row in range(3)]
+print(arr)
+
+# 14. Write a Python program to print the numbers of a specified list after removing even numbers from it.
+
+nums = [7, 8, 120, 25, 44, 20, 27]
+result = [i for i in nums if i % 2 == 1]
+print(result)
+
+# 15. Write a Python program to shuffle and print a specified list.
+
+from random import shuffle
+
+colors = ['red', 'green', 'white', 'black', 'pink', 'yellow']
+shuffle(colors)
+print(colors)
