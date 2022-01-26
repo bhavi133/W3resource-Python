@@ -140,3 +140,22 @@ from random import shuffle
 colors = ['red', 'green', 'white', 'black', 'pink', 'yellow']
 shuffle(colors)
 print(colors)
+
+# 16. Write a Python program to generate and print a list of first and last 5 elements where the values are square of numbers between 1 and 30 (both included).
+
+l1 = [i**2 for i in range(1, 31)]
+print(l1[:5])
+print(l1[-5:])
+
+# 17. Write a Python program to generate and print a list except for the first 5 elements, where the values are square of numbers between 1 and 30 (both included).
+
+l1 = [i**2 for i in range(1, 31)]
+print(l1[5:])
+
+# 18. Write a Python program to generate all permutations of a list in Python.
+
+from itertools import permutations
+
+colors = ['red', 'white', 'black']
+colors = list(permutations(colors))
+print(colors)
