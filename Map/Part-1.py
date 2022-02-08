@@ -129,3 +129,78 @@ def fibonacci(n):
         print(list4)
 
 fibonacci(10)
+
+# 11. Write a Python program to compute the sum of elements of a given array of integers, use map() function. Go to the editor
+
+def sum_of_elements(list1):
+    sum = 0
+    for i in list1:
+        sum += int(i)
+    return sum
+
+list1 = [1, 2, 3, 4, 5, -15]
+result = list(map(int, list1))
+print("Sum of all elements of the said list:")
+print(sum_of_elements(list1))
+      
+# 12. Write a Python program to find the ration of positive numbers, negative numbers and zeroes in an array of integers.
+
+def func(list1):
+    n = len(list1)
+    n1 = 0
+    n2 = 0
+    n3 = 0
+    for i in list1:
+        if i < 0:
+            n1 += 1
+        elif i == 0:
+            n2 += 1
+        else:
+            n3 += 1
+    return round(n1/n, 2), round(n2/n, 2), round(n3/n, 2)
+      
+list1 = ['0', '1', '2', '-1', '-5', '6', '0', '-3', '-2', '3', '4', '6', '8']
+result = list(map(int, list1))
+print("Ratio of positive numbers, negative numbers and zeroes:")
+print(func(result))
+      
+# 13. Write a Python program to count the same pair in two given lists. use map() function.
+
+from operator import eq
+
+def count_same_pair(list1, list2):
+    result = sum(map(eq, list1, list2))
+    return result
+
+list1 = [1, 2, 3, 4, 5, 6, 7, 8]
+list2 = [2, 2, 3, 1, 2, 6, 7, 9]
+print("Original Lists:")
+print(list1)
+print(list2)
+print("\nNumber of same pair of the said two given lists:")
+print(count_same_pair(list1, list2))
+      
+# 14. Write a Python program to convert a given list of strings into list of lists using map function.
+
+colors = ["Red", "Green", "Black", "Orange"]
+print('Original list of strings:')
+print(colors)
+result = list(map(list, colors))
+print("\nConvert the said list of strings into list of lists:")
+print(result)
+
+15. Write a Python program to convert a given list of tuples to a list of strings using map function.
+
+colors = [('red', 'pink'), ('white', 'black'), ('orange', 'green')]
+print("Original list of tuples:")
+print(colors)
+result1 = list(map(' '.join, colors))
+print("\nConvert the said list of tuples to a list of strings:")
+print(result1)
+
+names = [('Sheridan','Gentry'), ('Laila','Mckee'), ('Ahsan','Rivas'), ('Conna','Gonzalez')]
+print("\nOriginal list of tuples:")
+print(names)
+result2 = list(map(' '.join, names))
+print("\nConvert the said list of tuples to a list of strings:")
+print(result2)
