@@ -24,3 +24,22 @@ l1 = ['red', 'white', 'black']
 l2 = [0, 2, 3]
 l1.extend(l2)
 print(l1)
+
+# 25. Write a Python program to select an item randomly from a list.
+
+from random import choice
+
+l = ['red', 'white', 'black', 'blue']
+print(choice(l))
+
+# 26. Write a Python program to check whether two lists are circularly identical.
+
+l1 = [10, 10, 0, 0, 10]
+l2 = [10, 10, 10, 0, 0]
+l3 = [1, 10, 10, 0, 0]
+print("Comparing l1 and l2 : ", ' '.join(map(str, l2)) in ' '.join(map(str, l1*2)))
+print("Comparing l1 and l3 : ", ' '.join(map(str, l3)) in ' '.join(map(str, l1*2)))
+print("Comparing l2 and l3 : ", ' '.join(map(str, l3)) in ' '.join(map(str, l2*2)))
+print("Comparing l2 and l1 : ", ' '.join(map(str, l1)) in ' '.join(map(str, l2*2)))
+print("Comparing l3 and l1 : ", ' '.join(map(str, l1)) in ' '.join(map(str, l3*2)))
+print("Comparing l3 and l2 : ", ' '.join(map(str, l2)) in ' '.join(map(str, l3*2)))
