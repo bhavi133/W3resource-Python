@@ -43,3 +43,46 @@ print("Comparing l2 and l3 : ", ' '.join(map(str, l3)) in ' '.join(map(str, l2*2
 print("Comparing l2 and l1 : ", ' '.join(map(str, l1)) in ' '.join(map(str, l2*2)))
 print("Comparing l3 and l1 : ", ' '.join(map(str, l1)) in ' '.join(map(str, l3*2)))
 print("Comparing l3 and l2 : ", ' '.join(map(str, l2)) in ' '.join(map(str, l3*2)))
+
+# 27. Write a Python program to find the second smallest number in a list.
+
+def second_smallest(nums):
+    if (len(nums) < 2):
+        return
+    if ((len(nums) == 2) and (nums[0] == nums[1])):
+        return
+    duplicate = set()
+    unique = []
+    for i in nums:
+        if i not in duplicate:
+            unique.append(i)
+            duplicate.add(i)
+            unique.sort()
+    return unique[1]
+
+print(second_smallest([1, 2, -8, -2, 0, -2]))
+print(second_smallest([1, 1, 0, 0, 2, -2, -2]))
+print(second_smallest([1, 1, 1, 0, 0, 0, 2, -2, -2]))
+print(second_smallest([2, 2]))
+print(second_smallest([2]))
+
+# 28. Write a Python program to find the second largest number in a list.
+
+def second_largest(nums):
+    if (len(nums) < 2):
+        return
+    if ((len(nums) == 2) and (nums[0] == nums[1])):
+        return
+    duplicate = set()
+    unique = []
+    for i in nums:
+        if i not in duplicate:
+            unique.append(i)
+            duplicate.add(i)
+            unique.sort()
+    return unique[-2]
+
+print(second_largest([1, 2, 3, 4, 4]))
+print(second_largest([1, 1, 1, 0, 0, 0, 2, -2, -2]))
+print(second_largest([2, 2]))
+print(second_largest([1]))
