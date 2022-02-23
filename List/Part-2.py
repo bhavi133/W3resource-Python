@@ -124,3 +124,31 @@ print(count_range_in_list(list1, 40, 100))
 
 list2 = ['a', 'b', 'c', 'd', 'e', 'f']
 print(count_range_in_list(list2, 'a', 'e'))
+
+# 32. Write a Python program to check whether a list contains a sublist.
+
+def is_sublist(l1, l2):
+    if ''.join(map(str, l2)) in ''.join(map(str, l1)):
+        return True
+    else:
+        return False
+
+a = [2,4,3,5,7]
+b = [4,3]
+c = [3,7]
+print(is_sublist(a, b))
+print(is_sublist(a, c))
+
+# 33. Write a Python program to create a list by concatenating a given list which range goes from 1 to n.
+
+list1 = ['p', 'q']
+n = 5
+result = [f"{j}{i}" for i in range(1, n+1) for j in list1]
+print(result)
+
+# 36. Write a Python program to get variable unique identification number or string.
+
+int1 = 100
+print(id(int1))
+str1 = 'w3resource'
+print(id(str1))
