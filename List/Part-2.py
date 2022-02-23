@@ -86,3 +86,41 @@ print(second_largest([1, 2, 3, 4, 4]))
 print(second_largest([1, 1, 1, 0, 0, 0, 2, -2, -2]))
 print(second_largest([2, 2]))
 print(second_largest([1]))
+
+# 29. Write a Python program to get unique values from a list.
+
+def unique_values(list1):
+    unique = []
+    for i in list1:
+        if i not in unique:
+            unique.append(i)
+    return unique
+
+l1 = [10, 20, 30, 40, 20, 50, 60, 40]
+print(unique_values(l1))
+
+# 30. Write a Python program to get the frequency of the elements in a list.
+
+def frequency(l1):
+    dict1 = {}
+    for i in l1:
+        dict1[i] = l1.count(i)
+    return dict1
+
+l1 = [10, 10, 10, 10, 20, 20, 20, 20, 40, 40, 50, 50, 30]
+print(frequency(l1))
+
+# 31. Write a Python program to count the number of elements in a list within a specified range.
+
+def count_range_in_list(list1, r1, r2):
+    ctr = 0
+    for i in list1:
+        if r1 <= i <= r2:
+            ctr += 1
+    return ctr
+
+list1 = [10, 20, 30, 40, 40, 40, 70, 80, 99]
+print(count_range_in_list(list1, 40, 100))
+
+list2 = ['a', 'b', 'c', 'd', 'e', 'f']
+print(count_range_in_list(list2, 'a', 'e'))
