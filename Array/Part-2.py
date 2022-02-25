@@ -52,3 +52,25 @@ from array import array
 
 arr = array("I", (12, 25))
 print("Array buffer start address in memory and number of elements : ", arr.buffer_info())
+
+# 20. Write a Python program to get the length of an array.
+
+from array import array
+
+def length(arr):
+    ctr = 0
+    for i in arr:
+        ctr += 1
+    return ctr
+
+arr = array('i', [10, 20, 30, 40, 50])
+print("The length of the array is : ", length(arr))
+
+# 21. Write a Python program to get the array size of types unsigned integer and float.
+
+from array import array
+
+arr = array("I", (12, 25))
+print(arr.itemsize)
+arr = array("f", (12.236, 36.36))
+print(arr.itemsize)
