@@ -53,3 +53,30 @@ arr = array('i', [1, 3, 5, 3, 7, 9, 3])
 n = int(input("Input a number : "))
 print("Original array : ", arr)
 print(f"Number of occurrences of the number {n} in the said array: ", arr.count(n))
+
+# 7. Write a Python program to append items from inerrable to the end of the array.
+
+from array import *
+
+arr = array('i', [1, 3, 5, 7, 9])
+print("Original array : ", arr)
+arr.extend(arr)
+print("Extended array : ", arr)
+
+# 8. Write a Python program to convert an array to an array of machine values and return the bytes representation.
+
+from array import *
+
+arr = array('b', [119, 51, 114, 101, 115, 111, 117, 114, 99, 101])
+res = arr.tobytes()
+print("Bytes to string : ", res)
+
+# 9. Write a Python program to append items from a specified list.
+
+from array import *
+
+lst = [1, 2, 6, -8]
+print("Items in the list : ", lst)
+arr = array('i', lst)
+print("Append items from the list : ")
+print("Items in the array : ", arr)
