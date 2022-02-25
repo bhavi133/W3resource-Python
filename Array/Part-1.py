@@ -80,3 +80,13 @@ print("Items in the list : ", lst)
 arr = array('i', lst)
 print("Append items from the list : ")
 print("Items in the array : ", arr)
+
+# 10. Write a Python program to insert a new item before the second element in an existing array. Go to the editor
+
+from array import *
+
+arr = array('i', [1, 3, 5, 7, 9])
+print("Original array : ", arr)
+print("Insert new value 4 before 3 : ")
+arr.insert(1, 4)
+print("New array : ", arr)
