@@ -27,3 +27,28 @@ print("Original array : ", arr)
 lst = arr.tolist()
 print("Convert the said array to an ordinary list with the same items : ")
 print(lst)
+
+# 14. Write a Python program to find whether a given array of integers contains any duplicate element. Return true if any value appears at least twice in the said array and return false if every element is distinct.
+
+def test_duplicate(arr):
+    arr_set = set(arr)
+    return len(arr) != len(arr_set)
+
+print(test_duplicate([1, 2, 3, 4, 5]))
+print(test_duplicate([1, 2, 3, 4, 4]))
+print(test_duplicate([1, 1, 2, 2, 3, 3, 4, 4, 5]))
+
+# 18. Write a Python program to create an array contains six integers. Also print all the members of the array.
+
+from array import *
+
+arr = array('i', [10, 20, 30, 40, 50])
+for i in arr:
+    print(i)
+
+# 19. Write a Python program to get an array buffer information.
+
+from array import array
+
+arr = array("I", (12, 25))
+print("Array buffer start address in memory and number of elements : ", arr.buffer_info())
