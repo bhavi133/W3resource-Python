@@ -152,3 +152,27 @@ int1 = 100
 print(id(int1))
 str1 = 'w3resource'
 print(id(str1))
+
+# 37. Write a Python program to find common items from two lists.
+
+color1 = ["Red", "Green", "Orange", "White"]
+color2 = ["Black", "Green", "White", "Pink"]
+print(list(i for i in color1 if i in color2))
+
+# 38. Write a Python program to change the position of every n-th value with the (n+1)th in a list.
+
+l1 = [0, 1, 2, 3, 4, 5]
+l2 = []
+n = 2
+for i in range(0, len(l1), n):
+    l2.append(l1[i+1])
+    l2.append(l1[i])
+print(l2)
+
+# 39. Write a Python program to convert a list of multiple integers into a single integer.
+
+list1 = [11, 33, 50]
+string = ""
+for i in list1:
+    string += str(i)
+print(string)
